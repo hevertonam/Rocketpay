@@ -10,7 +10,7 @@ function setCardType(type) {
     visa: ["#436d99", "#2D57F2"],
     mastercard: ["#DF6F29", "#C6937"],
     maestro: ["#06F001", "#9A32CB"],
-    default: ["orange", "red"],
+    default: ["black", "gray"],
   }
   ccBgColor01.setAttribute("fill", colors[type][0])
   ccBgColor02.setAttribute("fill", colors[type][1])
@@ -61,7 +61,7 @@ const cardNumberPattern = {
     },
     {
       mask: "0000 0000 0000 0000",
-      cardtype: "maestro",
+      cardtype: "default",
     },
   ],
 
@@ -111,7 +111,6 @@ cardNumberMasked.on("accept", () => {
 
 function updateCardNumber(number) {
   const ccNumber = document.querySelector(".cc-number")
-
   ccNumber.innerText = number.length === 0 ? "1234 5678 9012 3456" : number
 }
 
