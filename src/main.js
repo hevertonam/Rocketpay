@@ -61,7 +61,7 @@ const cardNumberPattern = {
     },
     {
       mask: "0000 0000 0000 0000",
-      cardtype: "default",
+      cardtype: "maestro",
     },
   ],
 
