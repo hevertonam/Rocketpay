@@ -9,7 +9,6 @@ function setCardType(type) {
   const colors = {
     visa: ["#436d99", "#2D57F2"],
     mastercard: ["#DF6F29", "#C6937"],
-    // maestro: ["#06F001", "#9A32CB"],
     default: ["black", "gray"],
   }
   ccBgColor01.setAttribute("fill", colors[type][0])
@@ -104,7 +103,7 @@ function updateSecurityCode(code) {
 }
 
 cardNumberMasked.on("accept", () => {
-  const cardType = cardNumberMasked.masked.currentMask.cardType
+  const cardType = cardNumberMasked.masked.currentMask.cardtype
   setCardType(cardType)
   updateCardNumber(cardNumberMasked.value)
 })
